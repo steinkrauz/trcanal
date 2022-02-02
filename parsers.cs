@@ -112,7 +112,7 @@ namespace vksanal
             if (result.Success)
             {
                 string confId = result.Groups[2].Value;
-                //Need this to clean duplicaties like artamonov and artamonov@vks.kronshtadt.ru-<%%>-admin.stabur
+                //Need this to clean duplicaties like artamonov and artamonov@vks.contoso.com-<%%>-john.doe
                 string login = result.Groups[1].Value.Split('@')[0];
                 if (login.StartsWith("#")) return;  //those are unneeded #guest:9571b950
                 string name = ad.GetName(login);
